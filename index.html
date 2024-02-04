@@ -27,6 +27,19 @@
       height: 3rem;
       color: #3498db; /* You can change the color to your preference */
    }
+
+   .background-clip{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+   }
+
+   .main-page{
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+   }
+
 </style>
 </head>
 <body>
@@ -127,13 +140,18 @@
 <!-- Carousel Ends Here! -->
 
 <!-- Featured Content -->
-<div class="p-5 mb-4 bg-body-tertiary rounded-3">
- <div class="container-fluid py-5">
-   <h2 class="display-5 fw-bold title">Career Media Studio</h2>
-   <p class="col-md-8 fs-4">Every moment is a story waiting to be told. At Career Media Studio, we specialize in capturing the essence of your moments through exceptional drone shots, cinematic videography, and timeless photography. Our skilled team is dedicated to providing you with the highest quality visual content to cherish forever.</p>
-   <button class="btn btn-primary btn-lg" type="button"><a href="https://www.facebook.com/profile.php?id=100077937205748" target="_blank" class="text-light" style="text-decoration: none;">Explore More</a></button>
-</div>
-</div>
+<div class="main-page" style="position: relative; overflow: hidden;">
+   <video autoplay loop muted plays-inline class="background-clip" style="width: 100%; position: absolute; top: 0; left: 0; z-index: -1;">
+      <source src="Images/video.mp4" type="video/mp4">
+      </video>
+      <div class="container-fluid py-5" style="position: relative; z-index: 1;">
+         <h2 class="display-5 fw-bold title">Career Media Studio</h2>
+         <p class="col-md-8 fs-4">Every moment is a story waiting to be told. At Career Media Studio, we specialize in capturing the essence of your moments through exceptional drone shots, cinematic videography, and timeless photography. Our skilled team is dedicated to providing you with the highest quality visual content to cherish forever.</p>
+         <button class="btn btn-primary btn-lg" type="button"><a href="https://www.facebook.com/profile.php?id=100077937205748" target="_blank" class="text-light" style="text-decoration: none;">Explore More</a></button>
+      </div>
+   </div>
+
+
 </section>
 <!-- Home Page Ends Here! -->
 
